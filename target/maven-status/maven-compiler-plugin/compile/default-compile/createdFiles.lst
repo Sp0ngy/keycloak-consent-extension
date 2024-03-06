@@ -1,0 +1,3 @@
+curiescience\keycloak\mapper\CustomConsentMapper.class
+curiescience\keycloak\resource\ConsentResourceProviderFactory.class
+curiescience\keycloak\resource\ConsentResourceProvider.class
