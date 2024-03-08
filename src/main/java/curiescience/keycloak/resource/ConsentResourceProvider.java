@@ -68,6 +68,7 @@ public class ConsentResourceProvider implements RealmResourceProvider {
 	@Path("{userId}/consents")
 	@Produces(MediaType.APPLICATION_JSON)
 	// Overwrites all scopes within the UserConsentModel object. Send all granted scopes via payload.
+	// Authentication example: https://github.com/keycloak/keycloak/blob/release/20.0/examples/providers/domain-extension/src/main/java/org/keycloak/examples/domainextension/rest/ExampleRestResource.java
 	public Response updateConsent(@PathParam("userId") String userId, UserConsentRepresentation consentRep) {
 		checkRealmAdmin();  // AUTH
 		RealmModel realm = session.getContext().getRealm();
