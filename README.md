@@ -1,5 +1,15 @@
 # keycloak-consent-extension
-Extension for Keycloak to manage User Consent
+Extension for Keycloak to manage User Consent. Implementation for:
+
+## API
+```
+curl -X PUT "${OIDC_HOST}/realms/${OIDC_REALM}/custom-consent/${user_id}/consents" \
+     -H "Authorization: Bearer ${token}" \
+     -H "Content-Type: application/json" \
+     -d '{"clientId": "${OIDC_RP_CLIENT_ID}", "grantedClientScopes": ["tos-accepted-v1.0", "marketing-accepted-v1.0"]}'
+```
+- API called using Client access token
+- UserConsentModel gets update (behind the scene, the consent is revoked and newly created - constraint through available methods)
 
 ## Build maven project JAR and Deployment on docker-compose
 - `mvn clean package`
