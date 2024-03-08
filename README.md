@@ -8,7 +8,7 @@ curl -X PUT "${OIDC_HOST}/realms/${OIDC_REALM}/custom-consent/${user_id}/consent
      -H "Content-Type: application/json" \
      -d '{"clientId": "${OIDC_RP_CLIENT_ID}", "grantedClientScopes": ["tos-accepted-v1.0", "marketing-accepted-v1.0"]}'
 ```
-- API called using Client access token
+- authenticated REST API (`admin` role required)
 - UserConsentModel gets update (behind the scene, the consent is revoked and newly created - constraint through available methods)
 
 ## Build maven project JAR and Deployment on docker-compose

@@ -25,7 +25,7 @@ import org.keycloak.models.UserProvider;
 import org.keycloak.models.UserConsentModel;
 import org.keycloak.models.ClientScopeModel;
 import org.keycloak.services.managers.AppAuthManager;
-import org.keycloak.services.managers.AuthenticationManager.AuthResult;
+import org.keycloak.services.managers.AuthenticationManager;
 import org.keycloak.services.resource.RealmResourceProvider;
 import org.keycloak.representations.idm.UserConsentRepresentation;
 
@@ -41,9 +41,11 @@ import java.util.ArrayList;
 public class ConsentResourceProvider implements RealmResourceProvider {
 
 	private final KeycloakSession session;
+	private final AuthenticationManager.AuthResult auth;  // AUTH
 
 	public ConsentResourceProvider(KeycloakSession session) {
         this.session = session;
+		this.auth = new AppAuthManager.BearerTokenAuthenticator(session).authenticate();  // AUTH
     }
 
 	@Override
@@ -67,6 +69,7 @@ public class ConsentResourceProvider implements RealmResourceProvider {
 	@Produces(MediaType.APPLICATION_JSON)
 	// Overwrites all scopes within the UserConsentModel object. Send all granted scopes via payload.
 	public Response updateConsent(@PathParam("userId") String userId, UserConsentRepresentation consentRep) {
+		checkRealmAdmin();  // AUTH
 		RealmModel realm = session.getContext().getRealm();
 		UserProvider userProvider = session.users();
 		ClientModel client = realm.getClientByClientId(consentRep.getClientId());
@@ -105,6 +108,15 @@ public class ConsentResourceProvider implements RealmResourceProvider {
 		userProvider.addConsent(realm, userId, updatedConsent);	
 
         return Response.ok().entity(String.format("Consent updated successfully.")).build();
+    }
+
+	// AUTH
+	private void checkRealmAdmin() {
+        if (auth == null) {
+            throw new NotAuthorizedException("Bearer");
+        } else if (auth.getToken().getRealmAccess() == null || !auth.getToken().getRealmAccess().isUserInRole("admin")) {
+            throw new ForbiddenException("Does not have realm admin role");
+        }
     }
 
 }
