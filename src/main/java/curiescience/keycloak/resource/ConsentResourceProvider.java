@@ -115,8 +115,8 @@ public class ConsentResourceProvider implements RealmResourceProvider {
 	private void checkRealmAdmin() {
         if (auth == null) {
             throw new NotAuthorizedException("Bearer");
-        } else if (auth.getToken().getRealmAccess() == null || !auth.getToken().getRealmAccess().isUserInRole("admin")) {
-            throw new ForbiddenException("Does not have realm admin role");
+        } else if (auth.getToken().getRealmAccess() == null || !auth.getToken().getResourceAccess("realm-management").isUserInRole("realm-admin")) {
+            throw new ForbiddenException("Does not have realm admin role v3");
         }
     }
 
