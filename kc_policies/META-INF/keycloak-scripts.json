@@ -1,0 +1,9 @@
+{
+    "policies": [
+        {
+            "name": "Associated User ID in Resource Attribute",
+            "fileName": "hasAttributeAssociatedUserId.js",
+            "description": "Checks, if the resource has an attribute with the associated user id"
+        }
+    ]
+}
