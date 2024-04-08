@@ -1,6 +1,9 @@
 # keycloak-consent-extension
 Extension for Keycloak to manage User Consent. Implementation for:
 
+## Versioning
+- see `pom.xml`
+
 ## API
 ```
 curl -X PUT "${OIDC_HOST}/realms/${OIDC_REALM}/custom-consent/${user_id}/consents" \
