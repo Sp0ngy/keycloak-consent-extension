@@ -30,3 +30,10 @@ curl -X PUT "${OIDC_HOST}/realms/${OIDC_REALM}/custom-consent/${user_id}/consent
 - create new Consent Mapper:
     - Client-><YourClient>->Client scopes->`<YourClient>-dedicated`->Add mapper->By configuration
     - Select `ConsentMapper` and configure it, e.g. `Name: Consent Mapper`, `Token Claim Name: consent`
+
+## Deploy custom Java Script police
+- install JDK
+- on windows in `\kc_policies\` exec `"C:\Program Files\Java\jdk-21\bin\jar.exe" -cvf keycloakPolicies-1.0.jar -C . .`
+- copy JAR file to `keycloak/deployment`
+- Keycloak admin UI is buggy with custom JS policies, needs to save first to show JS code
+- Instruction: https://keycloak.discourse.group/t/how-to-create-js-policy/22821/2
