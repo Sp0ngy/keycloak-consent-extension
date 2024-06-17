@@ -1,0 +1,6 @@
+{
+    "themes": [{
+        "name" : "phoenix",
+        "types": [ "login"]
+    }]
+}

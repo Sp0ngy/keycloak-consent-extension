@@ -33,7 +33,10 @@ curl -X PUT "${OIDC_HOST}/realms/${OIDC_REALM}/custom-consent/${user_id}/consent
 
 ## Deploy custom Java Script police
 - install JDK
-- on windows in `\kc_policies\` exec `"C:\Program Files\Java\jdk-21\bin\jar.exe" -cvf keycloakPolicies-1.0.jar -C . .`
+- on windows in `<root>\kc_policies\` exec `"C:\Program Files\Java\jdk-21\bin\jar.exe" -cvf keycloakPolicies-1.0.jar -C . .`
 - copy JAR file to `keycloak/deployment`
 - Keycloak admin UI is buggy with custom JS policies, needs to save first to show JS code
 - Instruction: https://keycloak.discourse.group/t/how-to-create-js-policy/22821/2
+
+## Build custom theme JAR
+- on windows in `<root>\themes\custom-theme` exec `"C:\Program Files\Java\jdk-21\bin\jar.exe" -cvf keycloakPolicies-1.0.jar -C . .`
