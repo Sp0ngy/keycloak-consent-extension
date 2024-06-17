@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="45.136959mm"
+   height="11mm"
+   viewBox="0 0 45.136959 11"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="Onkoline_logo.svg"
+   inkscape:export-filename="Onkoline_logo.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.3772587"
+     inkscape:cx="181.15696"
+     inkscape:cy="-62.07984"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="false" />
+  <defs
+     id="defs2">
+    <rect
+       x="180.06784"
+       y="10.16512"
+       width="833.9328"
+       height="113.03185"
+       id="rect4155" />
+    <rect
+       x="180.06784"
+       y="10.16512"
+       width="833.9328"
+       height="113.03185"
+       id="rect4155-1" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-21.739389,-18)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-14.089735,15.510852)"
+       id="text4153"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';letter-spacing:-3px;white-space:pre;shape-inside:url(#rect4155);display:inline;fill:#66d3ca;fill-opacity:1"><tspan
+         x="180.06836"
+         y="43.794152"
+         id="tspan2482"><tspan
+           style="fill:#d0cece"
+           id="tspan2480">Onkoline</tspan></tspan></text>
+    <circle
+       style="fill:#66d3ca;fill-opacity:1;stroke-width:0.0805164"
+       id="path111-7"
+       cy="23.5"
+       cx="27.239389"
+       r="5.5" />
+    <ellipse
+       style="fill:#ffffff;stroke-width:0.15622"
+       id="path225-0"
+       cx="27.239389"
+       cy="23.5"
+       rx="4.4000001"
+       ry="4.3999996" />
+    <rect
+       style="fill:#66d3ca;fill-opacity:1;stroke-width:0.0718047"
+       id="rect1682-0"
+       width="2.0166667"
+       height="6.2333336"
+       x="26.231056"
+       y="20.383333" />
+    <rect
+       style="fill:#66d3ca;fill-opacity:1;stroke-width:0.0718047"
+       id="rect1682-7-9"
+       width="6.2333336"
+       height="2.0166667"
+       x="24.122725"
+       y="22.491667" />
+  </g>
+</svg>
