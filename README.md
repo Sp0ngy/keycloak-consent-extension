@@ -39,4 +39,4 @@ curl -X PUT "${OIDC_HOST}/realms/${OIDC_REALM}/custom-consent/${user_id}/consent
 - Instruction: https://keycloak.discourse.group/t/how-to-create-js-policy/22821/2
 
 ## Build custom theme JAR
-- on windows in `<root>\themes\custom-theme` exec `"C:\Program Files\Java\jdk-21\bin\jar.exe" -cvf keycloakPolicies-1.0.jar -C . .`
+- on windows in `<root>\themes\custom-theme` exec `"C:\Program Files\Java\jdk-21\bin\jar.exe" -cvf custom_themes-1.0.jar -C . .`

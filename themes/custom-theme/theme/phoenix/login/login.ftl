@@ -22,11 +22,11 @@
                           <div class="form-icon-container">
                             <input class="form-control form-icon-input <#if messagesPerField.existsError('username')>is-invalid</#if>" tabindex="1" id="username" name="username" value="${(login.username!'')}"
                                    type="text" autofocus autocomplete="off" placeholder="name@example.com" required=""
-                                   aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>" />
+                                   aria-invalid="<#if messagesPerField.existsError('username')>true</#if>" />
                               <span class="fas fa-user text-body fs-9 form-icon"></span>
-                            <#if messagesPerField.existsError('username','password')>
+                            <#if messagesPerField.existsError('username')>
                                 <div class="invalid-feedback">
-                                    ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                                    ${kcSanitize(messagesPerField.getFirstError('username'))?no_esc}
                                 </div>
                             </#if>
                           </div>
@@ -38,13 +38,13 @@
                           ${msg("password")}
                       </label>
                       <div class="form-icon-container">
-                        <input class="form-control form-icon-input <#if messagesPerField.existsError('username')>is-invalid</#if>" id="password" type="password" placeholder="Password"
+                        <input class="form-control form-icon-input <#if messagesPerField.existsError('password')>is-invalid</#if>" id="password" type="password" placeholder="Password"
                                tabindex="2" name="password" autocomplete="off" required=""
-                               aria-invalid="<#if messagesPerField.existsError('username','password')>true</#if>">
+                               aria-invalid="<#if messagesPerField.existsError('password')>true</#if>">
                           <span class="fas fa-key text-body fs-9 form-icon"></span>
-                        <#if usernameHidden?? && messagesPerField.existsError('username','password')>
+                        <#if messagesPerField.existsError('password')>
                             <div class="invalid-feedback">
-                                ${kcSanitize(messagesPerField.getFirstError('username','password'))?no_esc}
+                                ${kcSanitize(messagesPerField.getFirstError('password'))?no_esc}
                             </div>
                         </#if>
                       </div>
