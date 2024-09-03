@@ -4,11 +4,11 @@
     <#elseif section == "form">
             <a class="d-flex flex-center text-decoration-none mb-4">
               <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
-                <img src="${url.resourcesPath}/img/Onkoline_logo.svg" alt="Onkoline" width="250">
+                <img src="${url.resourcesPath}/img/Oncoprevia.svg" alt="Oncoprevia" width="250">
               </div>
             </a>
             <div class="text-center mb-4">
-              <h3 class="text-body-highlight">${msg("loginAccountTitle")}</h3>
+              <h3 class="text-body-highlight fw-semi-bold">${msg("loginAccountTitle")}</h3>
             </div>
 
             <#if realm.password>
@@ -38,7 +38,7 @@
                           ${msg("password")}
                       </label>
                       <div class="form-icon-container">
-                        <input class="form-control form-icon-input <#if messagesPerField.existsError('password')>is-invalid</#if>" id="password" type="password" placeholder="Password"
+                        <input class="form-control form-icon-input <#if messagesPerField.existsError('password')>is-invalid</#if>" id="password" type="password" placeholder=${msg("password")}
                                tabindex="2" name="password" autocomplete="off" required=""
                                aria-invalid="<#if messagesPerField.existsError('password')>true</#if>">
                           <span class="fas fa-key text-body fs-9 form-icon"></span>
@@ -63,13 +63,13 @@
                         </#if>
                       </div>
                       <#if realm.resetPasswordAllowed>
-                        <div class="col-auto"><a class="fs-9 fw-semibold" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></div>
+                        <div class="col-auto"><a class="fs-9 fw-normal" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></div>
                       </#if>
                     </div>
                     <button class="btn btn-primary w-100 mb-3" type="submit">${msg("doLogIn")}</button>
                 </form>
                     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-                        <div class="text-center">
+                        <div class="text-center fw-normal">
                             <p>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></p>
                         </div>
                     </#if>
