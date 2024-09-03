@@ -1,0 +1,426 @@
+
+/*-----------------------------------------------
+|   Phoenix buttons
+-----------------------------------------------*/
+/* -------------------------------------------------------------------------- */
+/*                                Phoenix button                              */
+/* -------------------------------------------------------------------------- */
+/* prettier-ignore */
+/* ----------------------------- Phoenix-buttons ---------------------------- */
+/*# sourceMappingURL=user.css.map */
+/*-----------------------------------------------
+|   Custom Theme Overrides
+-----------------------------------------------*/
+:root, [data-bs-theme='light'] {
+  /* Primary color */
+  --phoenix-body-color: #31374a;
+  --phoenix-body-color-rgb: 49, 55, 74;
+
+  --phoenix-body-bg: #ffffff;
+  --phoenix-body-bg-rgb: 255, 255, 255;
+
+  --phoenix-secondary-color: #3e465b;
+  --phoenix-secondary-color-rgb: 62, 70, 91;
+
+  --phoenix-secondary-bg: #d9d9d9;
+  --phoenix-secondary-bg-rgb: 217, 217, 217;
+
+  --phoenix-tertiary-color: #525b75;
+  --phoenix-tertiary-color-rgb: 82, 91, 117;
+
+  --phoenix-tertiary-bg: #f2f4f5;
+  --phoenix-tertiary-bg-rgb: 242, 244, 245;
+
+  --phoenix-quaternary-color: #9fa6bc;
+  --phoenix-quaternary-color-rgb: 159, 166, 188;
+
+  --phoenix-quaternary-bg: #e3e6ed;
+  --phoenix-quaternary-bg-rgb: 227, 230, 237;
+
+  --phoenix-body-highlight-color: #191919; /* Black */
+  --phoenix-body-highlight-color-rgb: 25, 25, 25;
+
+  --phoenix-body-highlight-bg: #fff3cd;
+  --phoenix-body-highlight-bg-rgb: 255, 243, 205;
+
+  --phoenix-emphasis-color: #191919; /* Black */
+  --phoenix-emphasis-color-rgb: 25, 25, 25;
+
+  --phoenix-emphasis-bg: #ffffff;
+  --phoenix-emphasis-bg-rgb: 255, 255, 255;
+
+  --phoenix-primary: #439E9A;
+  --phoenix-primary-rgb: 67, 158, 154;
+
+  --phoenix-primary-bg-subtle: #eaf7f5;
+
+  --phoenix-primary-lighter: #80dcd5;
+  --phoenix-primary-lighter-rgb: 128, 220, 213;
+
+  --phoenix-primary-light: #66cfc6;
+  --phoenix-primary-light-rgb: 102, 207, 198;
+
+  --phoenix-primary-dark: #3a8987;
+  --phoenix-primary-dark-rgb: 58, 137, 135;
+
+  --phoenix-primary-darker: #28726d;
+  --phoenix-primary-darker-rgb: 40, 114, 109;
+
+  --phoenix-primary-text-emphasis: #28726d;
+  /* Light Primary Shades */
+  --phoenix-primary-100-rgb: 178, 224, 222;
+  --phoenix-primary-200-rgb: 144, 210, 207;
+  --phoenix-primary-300-rgb: 105, 193, 189;
+
+  /* Primary Color */
+  --phoenix-primary-500-rgb: 67, 158, 154;
+
+  /* Darker Primary Shades */
+  --phoenix-primary-600-rgb: 40, 115, 112;
+
+
+  --phoenix-secondary: #026A92;
+  --phoenix-secondary-rgb: 2, 106, 146;
+
+  --phoenix-secondary-bg-subtle: #eaf4fa;
+
+  --phoenix-secondary-lighter: #4a93b3;
+  --phoenix-secondary-lighter-rgb: 74, 147, 179;
+
+  --phoenix-secondary-light: #317591;
+  --phoenix-secondary-light-rgb: 49, 117, 145;
+
+  --phoenix-secondary-dark: #015b79;
+  --phoenix-secondary-dark-rgb: 1, 91, 121;
+
+  --phoenix-secondary-darker: #01445f;
+  --phoenix-secondary-darker-rgb: 1, 68, 95;
+
+  --phoenix-secondary-text-emphasis: #015b79;
+
+  --phoenix-tertiary: #B087A0;
+  --phoenix-tertiary-rgb: 176, 135, 160;
+
+  --phoenix-tertiary-bg-subtle: #f5e9ef;
+
+  --phoenix-tertiary-lighter: #c79db5;
+  --phoenix-tertiary-lighter-rgb: 199, 157, 181;
+
+  --phoenix-tertiary-light: #b78fa7;
+  --phoenix-tertiary-light-rgb: 183, 143, 167;
+
+  --phoenix-tertiary-dark: #a6788f;
+  --phoenix-tertiary-dark-rgb: 166, 120, 143;
+
+  --phoenix-tertiary-darker: #956577;
+  --phoenix-tertiary-darker-rgb: 149, 101, 119;
+
+  --phoenix-tertiary-text-emphasis: #956577;
+
+  --phoenix-danger: #D14545;
+  --phoenix-danger-rgb: 209, 69, 69;
+
+  --phoenix-danger-bg-subtle: #f8d0d0;
+
+  --phoenix-danger-lighter: #d37b7b;
+  --phoenix-danger-lighter-rgb: 211, 123, 123;
+
+  --phoenix-danger-light: #bf5959;
+  --phoenix-danger-light-rgb: 191, 89, 89;
+
+  --phoenix-danger-dark: #8c3c3c;
+  --phoenix-danger-dark-rgb: 140, 60, 60;
+
+  --phoenix-danger-darker: #6a2d2d;
+  --phoenix-danger-darker-rgb: 106, 45, 45;
+
+  --phoenix-danger-text-emphasis: #8c3c3c;
+
+  --phoenix-info: #026A92;
+  --phoenix-info-rgb: 2, 106, 146;
+
+  --phoenix-info-bg-subtle: #eaf4fa;
+
+  --phoenix-success: #2E784C;
+  --phoenix-success-rgb: 46, 120, 76;
+
+  --phoenix-success-bg-subtle: #d5ecd9;
+
+  --phoenix-warning: #E27F40;
+  --phoenix-warning-rgb: 226, 127, 64;
+
+  --phoenix-warning-bg-subtle: #f9e6d8;
+
+  --phoenix-link-color: var(--phoenix-secondary);
+  --phoenix-link-color-rgb: var(--phoenix-secondary-rgb);
+
+/* Font */
+--phoenix-font-sans-serif: "Segoe UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+--phoenix-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+--phoenix-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+--phoenix-body-font-family: var(--phoenix-font-sans-serif);
+--phoenix-body-font-size: 1.2rem;
+--phoenix-body-font-weight: 300;
+
+/* Risk Group Color */
+  /* Standard Risk (Turquoise-Green Tone) */
+  --standard-risk: var(--phoenix-success);
+  --standard-risk-rgb: var(--phoenix-success-rgb);
+
+  /* Elevated Risk (Warning Tone) */
+  --elevated-risk: var(--phoenix-warning);
+  --elevated-risk-rgb: var(--phoenix-warning-rgb);
+
+  /* High Risk (Danger Tone) */
+  --high-risk: var(--phoenix-danger);
+  --high-risk-rgb: var(--phoenix-danger-rgb);
+
+  --phoenix-theme-wizard-active-color: var(--phoenix-tertiary);
+  --phoenix-theme-wizard-active-color-rgb: var(--phoenix-tertiary-rgb);
+
+  --phoenix-theme-wizard-complete-color: var(--phoenix-secondary);
+  --phoenix-theme-wizard-complete-color-rgb: var(--phoenix-secondary-rgb);
+}
+
+.text-standard-risk {
+  --phoenix-text-opacity: 1;
+  color: rgba(var(--standard-risk-rgb), var(--phoenix-text-opacity)) !important;
+}
+
+.text-elevated-risk {
+  --phoenix-text-opacity: 1;
+  color: rgba(var(--elevated-risk-rgb), var(--phoenix-text-opacity)) !important;
+}
+
+.text-high-risk {
+  --phoenix-text-opacity: 1;
+  color: rgba(var(--high-risk-rgb), var(--phoenix-text-opacity)) !important;
+}
+
+.text-danger {
+  --phoenix-text-opacity: 1;
+  color: rgba(var(--phoenix-danger-rgb), var(--phoenix-text-opacity)) !important;
+}
+
+.alert-outline-danger {
+  --phoenix-alert-color: var(--phoenix-danger); /* Adapted from phoenix-danger */
+  --phoenix-alert-border-color: var(--phoenix-danger); /* Adapted from phoenix-danger */
+}
+
+.alert-outline-info {
+  --phoenix-alert-color: var(--phoenix-info);
+  --phoenix-alert-border-color: var(--phoenix-info);
+}
+
+.alert-outline-warning {
+  --phoenix-alert-color: var(--phoenix-warning);
+  --phoenix-alert-border-color: var(--phoenix-warning);
+}
+
+.alert-outline-success {
+  --phoenix-alert-color: var(--phoenix-success);
+  --phoenix-alert-border-color: var(--phoenix-success);
+}
+
+.alert-outline-standard-risk {
+  --phoenix-alert-color: var(--standard-risk); /* Adapted from phoenix-danger */
+  --phoenix-alert-border-color: var(--standard-risk); /* Adapted from phoenix-danger */
+}
+
+.alert-outline-elevated-risk {
+  --phoenix-alert-color: var(--elevated-risk); /* Adapted from phoenix-danger */
+  --phoenix-alert-border-color: var(--elevated-risk); /* Adapted from phoenix-danger */
+}
+
+.alert-outline-high-risk {
+  --phoenix-alert-color: var(--high-risk); /* Adapted from phoenix-danger */
+  --phoenix-alert-border-color: var(--high-risk); /* Adapted from phoenix-danger */
+}
+
+.form-switch .form-check-input:checked {
+  background-color: rgba(var(--phoenix-primary-light-rgb), 1);
+}
+
+.form-check-label {
+  font-size: 1.0rem;
+}
+
+.btn-primary {
+  --phoenix-btn-bg: rgba(var(--phoenix-primary-rgb), 1);
+}
+
+.btn-outline-primary {
+  --phoenix-btn-color: var(--phoenix-primary);
+  --phoenix-btn-border-color: var(--phoenix-primary);
+  --phoenix-btn-hover-color: #fff;
+  --phoenix-btn-hover-bg: var(--phoenix-primary);
+  --phoenix-btn-hover-border-color: var(--phoenix-primary);
+  --phoenix-btn-focus-shadow-rgb: 67, 158, 154;
+  --phoenix-btn-active-color: #fff;
+  --phoenix-btn-active-bg: var(--phoenix-primary);
+  --phoenix-btn-active-border-color: var(--phoenix-primary);
+  --phoenix-btn-active-shadow: initial;
+  --phoenix-btn-disabled-color: var(--phoenix-primary);
+  --phoenix-btn-disabled-bg: transparent;
+  --phoenix-btn-disabled-border-color: var(--phoenix-primary);
+  --phoenix-gradient: none;
+}
+
+.btn-secondary {
+  --phoenix-btn-color: #fff;
+  --phoenix-btn-bg: var(--phoenix-secondary);
+  --phoenix-btn-border-color: transparent;
+  --phoenix-btn-hover-color: #fff;
+  --phoenix-btn-hover-bg: var(--phoenix-secondary-lighter);
+  --phoenix-btn-hover-border-color: rgba(0, 0, 0, 0.2);
+  --phoenix-btn-focus-shadow-rgb: 133, 197, 233; /* RGB of phoenix-secondary */
+  --phoenix-btn-active-color: #fff;
+  --phoenix-btn-active-bg: var(--phoenix-secondary);
+  --phoenix-btn-active-border-color: rgba(0, 0, 0, 0.25);
+  --phoenix-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  --phoenix-btn-disabled-color: #fff;
+  --phoenix-btn-disabled-bg: #85C5E9; /* Adapted from phoenix-secondary */
+  --phoenix-btn-disabled-border-color: transparent;
+}
+
+.btn-outline-secondary {
+  --phoenix-btn-color: var(--phoenix-secondary); /* Black color */
+  --phoenix-btn-border-color: #eff2f6; /* Light background color */
+  --phoenix-btn-hover-color: var(--phoenix-secondary); /* Black text on hover */
+  --phoenix-btn-hover-bg: #cbced1; /* Slightly darker background on hover */
+  --phoenix-btn-hover-border-color: #bfc2c5; /* Slightly darker border on hover */
+  --phoenix-btn-focus-shadow-rgb: 203, 206, 209; /* Focus shadow RGB values */
+  --phoenix-btn-active-color: var(--phoenix-secondary); /* Black text when active */
+  --phoenix-btn-active-bg: #bfc2c5; /* Slightly darker background when active */
+  --phoenix-btn-active-border-color: #b3b6b9; /* Slightly darker border when active */
+  --phoenix-btn-active-shadow: initial; /* Default shadow when active */
+  --phoenix-btn-disabled-color: var(--phoenix-secondary); /* Black text when disabled */
+  --phoenix-btn-disabled-bg: #eff2f6; /* Light background when disabled */
+  --phoenix-btn-disabled-border-color: #eff2f6; /* Light border when disabled */
+  --phoenix-gradient: none; /* No gradient */
+}
+
+
+.btn-outline-tertiary {
+  --phoenix-btn-color: #000000; /* Black color */
+  --phoenix-btn-border-color: #eff2f6; /* Light background color */
+  --phoenix-btn-hover-color: #000000; /* Black text on hover */
+  --phoenix-btn-hover-bg: #cbced1; /* Slightly darker background on hover */
+  --phoenix-btn-hover-border-color: #bfc2c5; /* Slightly darker border on hover */
+  --phoenix-btn-focus-shadow-rgb: 203, 206, 209; /* Focus shadow RGB values */
+  --phoenix-btn-active-color: #000000; /* Black text when active */
+  --phoenix-btn-active-bg: #bfc2c5; /* Slightly darker background when active */
+  --phoenix-btn-active-border-color: #b3b6b9; /* Slightly darker border when active */
+  --phoenix-btn-active-shadow: initial; /* Default shadow when active */
+  --phoenix-btn-disabled-color: #000000; /* Black text when disabled */
+  --phoenix-btn-disabled-bg: #eff2f6; /* Light background when disabled */
+  --phoenix-btn-disabled-border-color: #eff2f6; /* Light border when disabled */
+  --phoenix-gradient: none; /* No gradient */
+}
+
+.btn-outline-danger {
+  --phoenix-btn-color: var(--phoenix-danger);
+  --phoenix-btn-border-color: var(--phoenix-danger);
+  --phoenix-btn-hover-color: #fff;
+  --phoenix-btn-hover-bg: var(--phoenix-danger);
+  --phoenix-btn-hover-border-color: #8C3C3C; /* Adapted from phoenix-danger-dark */
+  --phoenix-btn-focus-shadow-rgb: 173, 75, 75; /* RGB of phoenix-danger */
+  --phoenix-btn-active-color: #fff;
+  --phoenix-btn-active-bg: var(--phoenix-danger);
+  --phoenix-btn-active-border-color: #8C3C3C; /* Adapted from phoenix-danger-dark */
+  --phoenix-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  --phoenix-btn-disabled-color: var(--phoenix-danger);
+  --phoenix-btn-disabled-bg: transparent;
+  --phoenix-btn-disabled-border-color: var(--phoenix-danger);
+  --phoenix-gradient: none;
+}
+
+.btn-link {
+  --phoenix-btn-font-weight: 400;
+  --phoenix-btn-color: var(--phoenix-link-color);
+  --phoenix-btn-bg: transparent;
+  --phoenix-btn-border-color: transparent;
+  --phoenix-btn-hover-color: var(--phoenix-link-hover-color);
+  --phoenix-btn-hover-border-color: transparent;
+  --phoenix-btn-active-color: var(--phoenix-link-hover-color);
+  --phoenix-btn-active-border-color: transparent;
+  --phoenix-btn-disabled-color: #9fa6bc;
+  --phoenix-btn-disabled-border-color: transparent;
+  --phoenix-btn-box-shadow: 0 0 0 #000;
+  --phoenix-btn-focus-shadow-rgb: 86, 137, 255;
+  text-decoration: none;
+}
+
+.form-control {
+  font-size: 0.95rem;
+}
+
+.form-select {
+  font-size: 0.95rem;
+}
+
+.form-floating > .form-select {
+  padding-top: 18.5px;
+  padding-bottom: 9.5px;
+}
+
+.form-control:focus {
+  border-color: #85C5E9;
+}
+
+.form-select:focus {
+  border-color: #85C5E9;
+}
+
+.bg-primary-300 {
+  --phoenix-bg-opacity: 1;
+  background-color: rgba(var(--phoenix-primary-300-rgb), var(--phoenix-bg-opacity)) !important;
+}
+.theme-wizard .nav-item .nav-link.active {
+  color: var(--phoenix-theme-wizard-active-color);
+}
+.theme-wizard .nav-item .nav-link.active .nav-item-circle {
+  color: var(--phoenix-theme-wizard-active-color);
+  border-color: var(--phoenix-theme-wizard-active-color);
+}
+
+.theme-wizard .nav-item .nav-link.done {
+  color: var(--phoenix-theme-wizard-complete-color);
+}
+.theme-wizard .nav-item .nav-link.done .nav-item-circle {
+  background-color: var(--phoenix-theme-wizard-complete-color) !important;
+  color: #fff;
+  border-color: var(--phoenix-theme-wizard-complete-color);
+}
+
+.text-success {
+  --phoenix-text-opacity: 1;
+  color: rgba(var(--phoenix-success-rgb), var(--phoenix-text-opacity)) !important;
+}
+
+.bg-secondary-lighter {
+  --phoenix-bg-opacity: 0.03;
+  background-color: rgba(var(--phoenix-secondary-lighter-rgb), var(--phoenix-bg-opacity)) !important;
+}
+
+.text-bg-secondary {
+  color: #fff !important;
+  background-color: RGBA(var(--phoenix-secondary-rgb), 1) !important;
+}
+
+.icon-item.icon-item-md {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.timeline-basic .timeline-item:not(:last-child) .timeline-item-bar .timeline-bar {
+  position: absolute;
+  height: calc(100% - 3.5rem);
+  left: 28px;
+  top: 56px;
+}
+
+body {
+  overflow-x: hidden !important;
+  padding-right: 0 !important;
+}

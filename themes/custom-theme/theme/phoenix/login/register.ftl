@@ -4,11 +4,11 @@
     <#elseif section == "form">
         <a class="d-flex flex-center text-decoration-none mb-4">
           <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
-            <img src="${url.resourcesPath}/img/Onkoline_logo.svg" alt="Onkoline" width="250">
+            <img src="${url.resourcesPath}/img/Oncoprevia.svg" alt="Oncoprevia" width="250">
           </div>
         </a>
         <div class="text-center mb-7">
-          <h3 class="text-body-highlight">${msg("registerTitle")}</h3>
+          <h3 class="text-body-highlight fw-semi-bold">${msg("registerTitle")}</h3>
         </div>
         <form id="kc-register-form" action="${url.registrationAction}" method="post" novalidate>
             <!-- Email form field -->
@@ -35,7 +35,7 @@
                 </label>
                 <div class="form-icon-container">
                     <input class="form-control form-icon-input <#if messagesPerField.existsError('password')>is-invalid</#if>" id="password" name="password" type="password"
-                           placeholder="Password" required aria-invalid="<#if messagesPerField.existsError('password')>true</#if>">
+                           placeholder=${msg("password")} required aria-invalid="<#if messagesPerField.existsError('password')>true</#if>">
                     <span class="fas fa-key text-body fs-9 form-icon"></span>
                     <#if messagesPerField.existsError('password')>
                         <div class="invalid-feedback">
@@ -51,7 +51,7 @@
                 </label>
                 <div class="form-icon-container">
                     <input class="form-control form-icon-input <#if messagesPerField.existsError('password-confirm')>is-invalid</#if>" id="password-confirm" name="password-confirm"
-                           type="password" placeholder="Confirm Password" required aria-invalid="<#if messagesPerField.existsError('password-confirm')>true</#if>">
+                           type="password" placeholder=${msg("passwordConfirm")} required aria-invalid="<#if messagesPerField.existsError('password-confirm')>true</#if>">
                     <span class="fas fa-key text-body fs-9 form-icon"></span>
                     <#if messagesPerField.existsError('password-confirm')>
                         <div class="invalid-feedback">
@@ -65,7 +65,7 @@
             <#if termsAcceptanceRequired??>
             <div class="row d-flex justify-content-center mb-2">
                 <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <a class="icon-nav-item btn border-0" target="_blank" href="https://sb-website-bucket.s3.amazonaws.com/home/legalnotice/GENERAL_TERMS_AND_CONDITIONS_de_Dec2022.pdf">
+                    <a class="icon-nav-item btn border-0" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/AGB_B2C_Oncoprevia.pdf">
                         <div class="icon-container mb-2 bg-info-100 d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
                           <span class="nav-link-icon far fa-file-alt fa-5x"></span></div>
                       <h6 class="nav-label">${msg("termsTitle")}</h6>
@@ -73,7 +73,7 @@
                 </div>
                 <!-- TODO: add url -->
                 <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <a class="icon-nav-item btn border-0" target="_blank" href="https://sb-website-bucket.s3.amazonaws.com/home/legalnotice/DATA_PROTECTION_de.pdf">
+                    <a class="icon-nav-item btn border-0" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/WRB_B2C_Oncoprevia.pdf">
                         <div class="icon-container mb-2 bg-info-100 d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
                           <span class="nav-link-icon fas fa-shield fa-5x"></span></div>
                       <h6 class="nav-label">${msg("dataTitle")}</h6>
