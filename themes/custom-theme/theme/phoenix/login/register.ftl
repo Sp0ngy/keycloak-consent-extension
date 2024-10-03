@@ -71,9 +71,8 @@
                       <h6 class="nav-label">${msg("termsTitle")}</h6>
                     </a>
                 </div>
-                <!-- TODO: add url -->
                 <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <a class="icon-nav-item btn border-0" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/WRB_B2C_Oncoprevia.pdf">
+                    <a class="icon-nav-item btn border-0" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/Datenschutzerklärung.pdf">
                         <div class="icon-container mb-2 bg-info-100 d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
                           <span class="nav-link-icon fas fa-shield fa-5x"></span></div>
                       <h6 class="nav-label">${msg("dataTitle")}</h6>
