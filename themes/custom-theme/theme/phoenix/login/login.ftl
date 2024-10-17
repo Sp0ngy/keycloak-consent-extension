@@ -4,7 +4,7 @@
     <#elseif section == "form">
             <a class="d-flex flex-center text-decoration-none mb-4">
               <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
-                <img src="${url.resourcesPath}/img/Oncoprevia.svg" alt="Oncoprevia" width="250">
+                <img src="${url.resourcesPath}/img/OncoPrevia_path.svg" alt="Oncoprevia" width="250">
               </div>
             </a>
             <div class="text-center mb-4">
