@@ -78,13 +78,29 @@
 
     <#elseif section == "socialProviders">
         <#if realm.password && social.providers??>
-            <div class="text-center mb-4">
-                <#list social.providers as p>
-                    <button class="btn btn-phoenix-secondary w-100 mb-3" onclick="window.location.href='${p.loginUrl}'">
-                        <i class="${p.iconClasses}" aria-hidden="true"></i>${p.displayName}
-                    </button>
-                </#list>
-            </div>
-        </#if>
+          <hr>
+          <div class="text-center mb-4">
+              <h3 class="text-body-highlight fw-semi-bold">${msg("identity-provider-login-label")}</h3>
+          </div>
+          <div class="mb-4 d-flex justify-content-center">
+              <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3">
+                  <#list social.providers as p>
+                      <#if p.alias == "google-idp">
+                          <!-- Google Button -->
+                          <button class="btn btn-outline-tertiary w-100 mb-3 d-flex align-items-center justify-content-center" 
+                                  onclick="window.location.href='${p.loginUrl}'" style="gap: 10px;">
+                              <img src="${url.resourcesPath}/img/google-idp.svg" alt="Google" width="20" height="20" />
+                              <span>${p.displayName}</span>
+                          </button>
+                      <#else>
+                          <!-- Default Button for Other Providers -->
+                          <button class="btn btn-outline-tertiary w-100 mb-3 d-flex align-items-center justify-content-center" onclick="window.location.href='${p.loginUrl}'">
+                              <i class="${p.iconClasses}" aria-hidden="true"></i>${p.displayName}
+                          </button>
+                      </#if>
+                  </#list>
+              </div>
+          </div>
+      </#if>
     </#if>
 </@layout.registrationLayout>
