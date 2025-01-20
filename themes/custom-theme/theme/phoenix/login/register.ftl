@@ -4,7 +4,7 @@
     <#elseif section == "form">
         <a class="d-flex flex-center text-decoration-none mb-4">
           <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
-            <img src="${url.resourcesPath}/img/Oncoprevia.svg" alt="Oncoprevia" width="250">
+            <img src="${url.resourcesPath}/img/OncoPrevia_path.svg" alt="Oncoprevia" width="250">
           </div>
         </a>
         <div class="text-center mb-7">
@@ -64,20 +64,29 @@
 
             <#if termsAcceptanceRequired??>
             <div class="row d-flex justify-content-center mb-2">
-                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <a class="icon-nav-item btn border-0" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/AGB_B2C_Oncoprevia.pdf">
-                        <div class="icon-container mb-2 bg-info-100 d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
-                          <span class="nav-link-icon far fa-file-alt fa-5x"></span></div>
-                      <h6 class="nav-label">${msg("termsTitle")}</h6>
-                    </a>
-                </div>
-                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <a class="icon-nav-item btn border-0" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/Datenschutzerklärung.pdf">
-                        <div class="icon-container mb-2 bg-info-100 d-flex justify-content-center align-items-center" style="width: 100px; height: 100px;">
-                          <span class="nav-link-icon fas fa-shield fa-5x"></span></div>
-                      <h6 class="nav-label">${msg("dataTitle")}</h6>
-                    </a>
-                </div>
+                    <!-- Terms of Service Icon -->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <a class="icon-nav-item btn border-0 text-center d-flex flex-column align-items-center" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/AGB_B2C_Oncoprevia.pdf">
+                            <div class="icon-container bg-info-100 d-flex justify-content-center align-items-center rounded-circle mb-3" style="width: 120px; height: 120px;">
+                                <span class="nav-link-icon far fa-file-alt fa-4x text-primary"></span>
+                            </div>
+                            <div>
+                                <h6 class="nav-label fw-bold m-0">${msg("termsTitle")}</h6>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Data Privacy Icon -->
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <a class="icon-nav-item btn border-0 text-center d-flex flex-column align-items-center" target="_blank" href="https://s3.eu-central-3.ionoscloud.com/publicdocuments/Datenschutzerklärung.pdf">
+                            <div class="icon-container bg-info-100 d-flex justify-content-center align-items-center rounded-circle mb-3" style="width: 120px; height: 120px;">
+                                <span class="nav-link-icon fas fa-shield fa-4x text-primary"></span>
+                            </div>
+                            <div>
+                                <h6 class="nav-label fw-bold m-0">${msg("dataTitle")}</h6>
+                            </div>
+                        </a>
+                    </div>
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" id="termsAccepted" name="termsAccepted" class="form-check-input <#if messagesPerField.existsError('termsAccepted')>is-invalid</#if>"
