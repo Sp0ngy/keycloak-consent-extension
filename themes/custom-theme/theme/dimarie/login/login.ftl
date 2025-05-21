@@ -1,0 +1,114 @@
+<#import "template.ftl" as layout>
+<@layout.registrationLayout displayMessage=!messagesPerField.existsError('username','password') displayInfo=realm.password && realm.registrationAllowed && !registrationDisabled??; section>
+    <#if section == "header">
+    <#elseif section == "form">
+            <div class="d-flex flex-column align-items-center mb-4">
+              <img src="${url.resourcesPath}/img/logokomp_ukw11C_260x80.svg" alt="UKW Logo" width="200" class="mb-2">
+              <a class="d-flex flex-center text-decoration-none">
+                <div class="d-flex align-items-center fw-bolder fs-3 d-inline-block">
+                  <img src="${url.resourcesPath}/img/OncoPrevia_path.svg" alt="Oncoprevia" width="250">
+                </div>
+              </a>
+            </div>
+
+            <div class="alert alert-outline-info text-center mb-4" role="alert">
+              <h3 class="fw-bold mb-1">${msg("studyLabel")}</h3>
+              <p class="fw-normal text-dark mb-3">${msg("studySubLabel")}</p>
+              <p class="fw-normal text-dark mb-2">${msg("getParticipantID")}</p>
+              <p>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=tRRcYJ0ui0yQIEsbRlzg5MNuLGuC7yJGinRXl-XYNZVUMlZTSDZHRzFPS0pLQkNSNkVDNDRBRElSOC4u"
+                   target="_blank" rel="noopener noreferrer" class="fw-semi-bold">
+                  ${msg("getParticipantIDLinkText")}
+                </a>
+              </p>
+            </div>
+
+            <div class="text-center mb-4">
+              <h3 class="text-body-highlight fw-semi-bold">${msg("startLoginText")}</h3>
+            </div>
+
+            <#if realm.password>
+                <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post" novalidate>
+                    <#if !usernameHidden??>
+                        <!-- username form field -->
+                        <div class="mb-3 text-start">
+                          <label class="form-label" for="username">
+                              ${msg("ParticipantIDLabel")}
+                          </label>
+                          <div class="form-icon-container">
+                            <input class="form-control form-icon-input <#if messagesPerField.existsError('username')>is-invalid</#if>" tabindex="1" id="username" name="username" value="${(login.username!'')}"
+                                   type="text" autofocus autocomplete="off" placeholder="${msg("ParticipantIDLabel")}" required=""
+                                   aria-invalid="<#if messagesPerField.existsError('username')>true</#if>" />
+                              <span class="fas fa-user text-body fs-9 form-icon"></span>
+                            <#if messagesPerField.existsError('username')>
+                                <div class="invalid-feedback">
+                                    ${kcSanitize(messagesPerField.getFirstError('username'))?no_esc}
+                                </div>
+                            </#if>
+                          </div>
+                        </div>
+                    </#if>
+                    <!-- password form field -->
+                    <div class="mb-3 text-start">
+                      <label class="form-label" for="password">
+                          ${msg("password")}
+                      </label>
+                      <div class="form-icon-container">
+                        <input class="form-control form-icon-input <#if messagesPerField.existsError('password')>is-invalid</#if>" id="password" type="password" placeholder=${msg("password")}
+                               tabindex="2" name="password" autocomplete="off" required=""
+                               aria-invalid="<#if messagesPerField.existsError('password')>true</#if>">
+                          <span class="fas fa-key text-body fs-9 form-icon"></span>
+                        <#if messagesPerField.existsError('password')>
+                            <div class="invalid-feedback">
+                                ${kcSanitize(messagesPerField.getFirstError('password'))?no_esc}
+                            </div>
+                        </#if>
+                      </div>
+                    </div>
+                    <div class="row flex-between-center mb-4">
+                      <div class="col-auto">
+                        <#if realm.rememberMe && !usernameHidden??>
+                        <div class="form-check mb-0">
+                            <#if login.rememberMe??>
+                                <input class="form-check-input" tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked> ${msg("rememberMe")}
+                            <#else>
+                                <input class="form-check-input" tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"> ${msg("rememberMe")}
+                            </#if>
+                          <label class="form-check-label mb-0" for="rememberMe">Remember me</label>
+                        </div>
+                        </#if>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary w-100 mb-3" type="submit">${msg("doLogIn")}</button>
+                </form>
+            </#if>
+    <#elseif section == "info">
+
+    <#elseif section == "socialProviders">
+        <#if realm.password && social.providers??>
+          <hr>
+          <div class="text-center mb-4">
+              <h3 class="text-body-highlight fw-semi-bold">${msg("identity-provider-login-label")}</h3>
+          </div>
+          <div class="mb-4 d-flex justify-content-center">
+              <div class="col-sm-10 col-md-8 col-lg-5 col-xl-5 col-xxl-3">
+                  <#list social.providers as p>
+                      <#if p.alias == "google-idp">
+                          <!-- Google Button -->
+                          <button class="btn btn-outline-tertiary w-100 mb-3 d-flex align-items-center justify-content-center" 
+                                  onclick="window.location.href='${p.loginUrl}'" style="gap: 10px;">
+                              <img src="${url.resourcesPath}/img/google-idp.svg" alt="Google" width="20" height="20" />
+                              <span>${p.displayName}</span>
+                          </button>
+                      <#else>
+                          <!-- Default Button for Other Providers -->
+                          <button class="btn btn-outline-tertiary w-100 mb-3 d-flex align-items-center justify-content-center" onclick="window.location.href='${p.loginUrl}'">
+                              <i class="${p.iconClasses}" aria-hidden="true"></i>${p.displayName}
+                          </button>
+                      </#if>
+                  </#list>
+              </div>
+          </div>
+      </#if>
+    </#if>
+</@layout.registrationLayout>
