@@ -2,5 +2,10 @@
     "themes": [{
         "name" : "phoenix",
         "types": [ "login"]
-    }]
+    },
+        {
+        "name" : "dimarie",
+        "types": [ "login"]
+    }
+    ]
 }
